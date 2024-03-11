@@ -1,108 +1,41 @@
-body {
-  margin: 0px;
-  padding: 0px;
-  font-family: Arial, Helvetica, sans-serif;
-}
+@import './global/global.css';
+@import './utilidades/tipografia.css';
+@import './utilidades/cores.css';
+@import './utilidades/animacao.css';
 
-ul {
-  margin: 0px;
-  list-style: none;
-}
 
-a {
-  text-decoration: none;
-}
+@import './global/header.css';
+@import './global/footer.css';
 
-.header-bg {
-  background-color: #000000;
-}
+/* Utilidades */
+@import "./utilidades/componentes.css";
+@import "./utilidades/formulario.css";
 
-.header {
-  display: flex;
-  /* quando o conteudo espremer ele vai quebrar pra baixo */
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
+/* home */
+@import './home/introducao.css';
+@import './home/tecnologia.css';
+@import './home/parceiros.css';
+@import './home/depoimento.css';
 
-  /* border box vai fazer com que o valor de padding se mantenha no total do max-width*/
-  box-sizing: border-box;
-  max-width: 1200px;
+/* Bicicletas */
+@import './bicicletas/bicicletas-lista.css';
+@import './bicicletas/bicicletas.css';
 
-  /* quando o container crescer, a lista sempre vai se manter no mesmo lugar,
-   a margem vai se tornar automatica, deixando no mesmo lugar */
-  margin-left: auto;
-  margin-right: auto;
-}
+/* Bicicleta */
+@import './bicicleta/bicicleta.css';
+@import './bicicleta/seguro.css';
 
-.header-menu {
-  display: flex;
-  gap: 40px;
-  flex-wrap: wrap;
+/* Seguros */
+@import './seguros/seguros.css';
+@import './seguros/vantagens.css';
+@import './seguros/perguntas.css';
 
-}
+/* Contato */
+@import './contato/contato.css';
+@import './contato/lojas.css';
 
-.header-menu a {
-  color: #ffffff;
-  /* aumenta a area de contato */
-  padding: 16px 0;
+/* Orcamento */
+@import './orcamento/orcamento.css';
 
-  /* por padrão quando um item cair um abaixo do outro
-   o padding não vai pegar por isso usamos o inline block */
-  display: inline-block;
-  font-size: 1.125rem;
-  position: relative;
-}
-
-.header-menu a:after {
-  content: "";
-  display: block;
-  height: 2px;
-  width: 0px;
-  background: #ffffff;
-  margin-top: 4px;
-  transition: 0.3s;
-
-  /* vai tirar o after do fluxo, que estava tirando a centralização */
-  position: absolute;
-}
-
-.header-menu a:hover:after {
-  width: 100%;
-}
-
-@media(max-width:800px) {
-  .header-menu a {
-    gap: 20px;
-  }
-
-  .header-menu a {
-    background: #111;
-    padding: 12px 16px;
-    border-radius: 4px;
-  }
-
-  .header-menu a:hover {
-    background-color: #2E2E2E;
-  }
-
-  .header-menu a::after {
-    display: none;
-  }
-}
-
-@media(max-width:600px) {
-  .header-menu {
-    gap: 12px;
-  }
-
-  .header-menu a {
-    padding: 8px 12px;
-    font-size: 14px;
-  }
-
-  .header-menu a:hover {
-    background-color: #2E2E2E;
-  }
-}
+/* Termos */
+@import './termos/termos.css';
